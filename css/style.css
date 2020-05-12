@@ -1,0 +1,261 @@
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	background-color: #8FBC8F;
+	font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+	max-width: 1280px;
+	margin: 15px auto;
+	background-color: #3CB371;
+	padding: 15px;
+	border-radius: 15px;
+}
+
+.wrapper__input {
+	display: flex;
+	justify-content: space-between;
+}
+
+.container_input {
+	display: flex;
+	flex-direction: column;
+	width: calc(50% - 7.5px);
+}
+
+.label_date {
+	font-size: calc(17px + .72vw);
+	color: #000000;
+	max-width: 300px;
+} 
+
+.date_input {
+	margin-top: 15px;
+    padding: 10px;
+    font-size: 24px;
+    background: #8FBC8F;
+    box-shadow: 0 0 50px;
+    border: none;
+    border-radius: 15px;
+}
+
+.calendar {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.calendar__row {
+	display: flex;
+}
+
+.calendar__item,
+.calendar__days__item {
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1 1 calc((100% / 7) - 20px);
+	border: 1px solid black;
+	height: 50px;
+	font-size: 17px;
+	transition: .1s;
+}
+
+.calendar__days__item:first-child {
+	border-top-left-radius: 15px;
+}
+
+.calendar__days__item:last-child {
+	border-top-right-radius: 15px;
+}
+
+.calendar__item:hover {
+	background-color: #8FBC8F;
+	transform: scale(1.2);
+	box-shadow: 0 0 20px;
+	transition: .3s;
+}
+
+.calendar_dis, 
+.to_do_list_dis{
+	display: none;
+}
+
+.back {
+	width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    position: relative;
+    transition: .5s;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.back:before {
+	content: '';
+	height: 15px;
+	width: 4px;
+	background-color: #000000;
+	transform: rotate(45deg);
+	position: absolute;
+	left: calc(50% - 2px);
+    top: calc(50% - 7.5px);
+}
+
+.back:after {
+	content: '';
+	height: 15px;
+	width: 4px;
+	background-color: #000000;
+	transform: rotate(-45deg);
+	position: absolute;
+	right: calc(50% - 2px);
+    bottom: calc(50% - 7.5px);
+}
+
+.back:hover {
+	transform: scale(1.2);
+	transition: .5s;
+	background-color: #8FBC8F;
+	box-shadow: 0 0 10px;
+}
+
+.wrapper_create_todo {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create_todo {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.wrapper_title_todo {
+	width: 100%;
+	display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.title_todo {
+	font-size: 36px;
+}
+
+.wrapper_form {
+	display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.form_group {
+	display: flex;
+	flex-direction: column;
+}
+
+.label_text {
+	margin-top: 15px;
+}
+
+.textarea_input {
+	max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+}
+
+.btn_create {
+	margin: 25px;
+    border: none;
+    padding: 25px;
+    border-radius: 50%;
+    font-size: 16px;
+    background-color: #FF7F50;
+    transition: .3s; 
+    font-weight: bold;
+}
+
+.btn_create:hover,
+.btn:hover {
+	transform: scale(1.1);
+	color: #ffffff;
+	transition: .3s; 
+	box-shadow: 0 0 10px;
+}
+
+.wrapper_todo {
+	width: 100%;
+}
+
+.todo {
+	margin-bottom: 15px;
+}
+
+.alert {
+	border: 1px solid #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px;
+}
+
+.alert_danger {
+	background-color: #8B0000;
+}
+
+.alert_success {
+	background-color: #FFD700;
+}
+
+.title_todo_item {
+	color: #000000;
+    font-weight: bold;
+    font-size: calc(24px + .41vw);
+}
+
+.title_todo_item_sec {
+	font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.btn {
+	padding: 15px 5px;
+    margin: 15px;
+    font-weight: bold;
+    border: none;
+    background-color: #FF7F50;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+button:active, button:focus,
+input:active, input:focus,
+textarea:active, textarea:focus {
+  outline: none !important;
+}
+
+.wrapper_today_date {
+	margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.today_date {
+	font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+	.today_date {
+		font-size: 20px;
+	}
+}

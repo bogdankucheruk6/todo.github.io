@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper_today_date">
+        <h1 class="today_date"></h1>
+    </div>    
+    <div class="wrapper">
+        <div class="wrapper__input">
+            <div class="container_input">
+                <h4 class="label_date">Введите год</h2>
+                <input class="year date_input" id="year" type="text" name="year">
+            </div>    
+            <div class="container_input">
+                <h4 class="label_date">Введите месяц</h2>
+                <input class="name date_input" id="month" type="text" name="month">
+            </div>    
+        </div>
+        <div class="calendar" id="calendar"></div>
+        <div class="to_do_list to_do_list_dis">
+            <div onclick="back()" class="back"></div>
+            <div class="wrapper_create_todo">
+                <div class="create_todo">
+                    <div class="wrapper_title_todo">
+                        <h1 class="title_todo">Создание заметок</h1>
+                    </div>    
+                    <div class="wrapper_form">
+                        <div class="form_group">
+                            <h4 class="label_date">Введите заголовок</h4>
+                            <input type="text" class="date_input" id="title-to-do-list">
+                        </div>
+                        <div class="form_group">
+                            <h4 class="label_date label_text">Введите текст</h4>
+                            <textarea class="date_input textarea_input" id="description-to-do-list"></textarea>
+                        </div>
+                    </div>    
+                    <button id="create-to-do-item" class="btn_create">Добавить заметку</button>
+                </div>
+                <div class="wrapper_todo"></div>
+            </div>
+        </div>
+    </div>    
+    <script src="js/ToDo.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
